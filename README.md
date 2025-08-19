@@ -14,7 +14,7 @@ An interactive HR Analytics Dashboard built in **Power BI** to explore and expla
 Place your images in `assets/` and reference them here, e.g.
 
 - Page 1 – Overview  
-  `![Overview](assets/page1_overview.png)`
+  `![Overview](Attrition Overview.png)`
 - Page 2 – Workforce Profile  
   `![Profile](assets/page2_profile.png)`
 
