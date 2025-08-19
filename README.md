@@ -5,7 +5,7 @@ An interactive HR Analytics Dashboard built in **Power BI** to explore and expla
 - **Page 1 – Attrition Overview** (executive KPIs & high-level trends)
 - **Page 2 – Workforce Profile & Trends** (drivers of attrition like gender, marital status, business travel, overtime, distance, education field)
 
-> Sample output (from the included report): **1,470 employees**, **237 attritions**, **16.1% attrition rate**. :contentReference[oaicite:1]{index=1}
+> Sample output (from the included report): **1,470 employees**, **237 attritions**, **16.1% attrition rate**.
 
 ---
 
@@ -24,14 +24,14 @@ Place your images in `assets/` and reference them here, e.g.
 
 ### Page 1 – Attrition Overview
 - KPI cards: Count of Employees, Attrition, Attrition Rate, Avg Age, Avg Salary, Avg Years. :contentReference[oaicite:2]{index=2}
-- Visuals: Attrition by Education, Age, Salary Slab, Years at Company, Job Role; Job Satisfaction matrix. :contentReference[oaicite:3]{index=3}
+- Visuals: Attrition by Education, Age, Salary Slab, Years at Company, Job Role; Job Satisfaction matrix.
 
 ### Page 2 – Workforce Profile & Trends
-- Gender distribution and **Attrition Rate by Gender** (e.g., ~17% vs ~14.8%). :contentReference[oaicite:4]{index=4}
-- **Attrition Rate by Marital Status** (Single highest). :contentReference[oaicite:5]{index=5}
-- **Attrition Rate by Business Travel** (Travel_Frequently ≈ 24.9% > Travel_Rarely > Non-Travel). :contentReference[oaicite:6]{index=6}
-- **Attrition Rate by OverTime** (Yes ≈ 30.5% vs No ≈ 10.4%). :contentReference[oaicite:7]{index=7}
-- **Distance from Home (Buckets)** with attrition % trend (0–5 km → 6–10 km → 10+ km). :contentReference[oaicite:8]{index=8}
+- Gender distribution and **Attrition Rate by Gender** (e.g., ~17% vs ~14.8%).
+- **Attrition Rate by Marital Status** (Single highest). 
+- **Attrition Rate by Business Travel** (Travel_Frequently ≈ 24.9% > Travel_Rarely > Non-Travel).
+- **Attrition Rate by OverTime** (Yes ≈ 30.5% vs No ≈ 10.4%).
+- **Distance from Home (Buckets)** with attrition % trend (0–5 km → 6–10 km → 10+ km). 
 
 ---
 
@@ -50,9 +50,7 @@ Put your data file(s) in a `data/` folder, e.g. `data/HR_Analytics.csv` or inclu
 
 ---
 
-## ⚙️ DAX (copy/paste)
-
-> Use these exactly-named fields/tables or adjust to your model.
+## ⚙️ DAX 
 
 ### 1) Attrition Rate (Measure)
 ```DAX
