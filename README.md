@@ -16,7 +16,7 @@ Place your images in `assets/` and reference them here, e.g.
 - Page 1 – Overview  
   `![Overview](Attrition Overview.png)`
 - Page 2 – Workforce Profile  
-  `![Profile](assets/page2_profile.png)`
+  `![Profile](Workforce Profile & Trends.png)`
 
 ---
 
