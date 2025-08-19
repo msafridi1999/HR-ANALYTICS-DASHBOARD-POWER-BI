@@ -53,9 +53,54 @@ Put your data file(s) in a `data/` folder, e.g. `data/HR_Analytics.csv` or inclu
 ## ⚙️ DAX 
 
 ### 1) Attrition Rate (Measure)
-```DAX
-Attrition Rate =
-DIVIDE(
-    CALCULATE(COUNTROWS('HR_Analytics'), 'HR_Analytics'[Attrition] = "Yes"),
-    COUNTROWS('HR_Analytics')
+AttritionRate = SUM(HR_Analytics[Attrition Count])/SUM(HR_Analytics[EmployeeCount])
+
+### 2) Distance Bucket (Calculated Column)
+
+Create a New Column:
+
+Distance Bucket = 
+SWITCH(
+    TRUE(),
+    'HR_Analytics'[DistanceFromHome] >= 0 && 'HR_Analytics'[DistanceFromHome] <= 5, "0-5 km",
+    'HR_Analytics'[DistanceFromHome] > 5 && 'HR_Analytics'[DistanceFromHome] <= 10, "6-10 km",
+    'HR_Analytics'[DistanceFromHome] > 10, "10+ km",
+    "Unknown"
 )
+
+### 3) Distance Sort (Calculated Column) — for correct left→right order
+Distance Sort = 
+SWITCH(
+    TRUE(),
+    'HR_Analytics'[DistanceFromHome] >= 0 && 'HR_Analytics'[DistanceFromHome] <= 5, 1,
+    'HR_Analytics'[DistanceFromHome] > 5 && 'HR_Analytics'[DistanceFromHome] <= 10, 2,
+    'HR_Analytics'[DistanceFromHome] > 10, 3,
+    4
+)
+
+## Option A — Build from scratch (reproducible)
+
+1. Get Data → Import data/HR_Analytics.csv.
+
+2. Create the DAX objects above (one measure + two columns).
+
+3. Build visuals:
+
+    Page 1: KPIs + charts (Education, Age, Salary Slab, Years at Company, Job Role, Job Satisfaction). 
+
+    Page 2: Donut (Gender), Bar/Column charts for Attrition Rate by Gender/Marital Status/Business Travel/OverTime/EducationField and a Line/Column for Distance Bucket. 
+
+4. Sort the Distance chart by Distance Sort to enforce 0–5 km → 6–10 km → 10+ km.
+
+ ## Repo Structure  .
+├── assets/
+│   ├── page1_overview.png
+│   └── page2_profile.png
+├── data/
+│   └── HR_Analytics.csv
+├── HR_Analytics_Dashboard.pbix
+└── README.md
+
+## Reference Output
+
+The included PDF shows representative visuals, KPIs, and percentages used in this project (e.g., KPIs on Page 1; gender/business travel/overtime/distance analyses on Page 2)
